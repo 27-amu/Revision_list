@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <limits.h>
+
+int main() {
+    int n;
+    printf("Enter n: ");
+    scanf("%d", &n);
+    int a[n];
+    printf("Enter %d integers: ", n);
+    for (int i = 0; i < n; i++) scanf("%d", &a[i]);
+
+    int min = INT_MAX, max = INT_MIN;
+    for (int i = 0; i < n; i++) {
+        if (a[i] < min) min = a[i];
+        if (a[i] > max) max = a[i];
+    }
+    printf("Min: %d, Max: %d\n", min, max);
+    return 0;
+}
